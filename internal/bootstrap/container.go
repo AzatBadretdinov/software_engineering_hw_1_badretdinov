@@ -19,6 +19,7 @@ func BuildContainer() (*dig.Container, error) {
 	providers := []any{
 		func() fleet.VehicleInspector { return servicecenter.New() },
 		fleet.NewService,
+		func() io.Reader { return os.Stdin },
 		func() io.Writer { return os.Stdout },
 		console.NewApp,
 	}
