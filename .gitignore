@@ -4,6 +4,7 @@ bin/
 *.test
 *.out
 coverage.out
+coverage
 coverage.html
 
 # IDE
